@@ -40,7 +40,7 @@ Enemy.prototype.render = function() {
 // Now write your own player class
 // This class requires an update(), render() and
 // a handleInput() method.
-var Player = function() {
+var Player = function () {
   this.reset();
   this.sprite = 'images/enemy-bug.png';
 };
@@ -51,9 +51,13 @@ Player.prototype.reset = function () {
   this.y = 404;
 };
 
-Player.prototype.update = function (dt){};
+Player.prototype.update = function (dt) {
+  if(this.y < 25){
+            this.reset();
+  };
+};
 
-Player.prototype.render = function (){
+Player.prototype.render = function () {
   ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
 
