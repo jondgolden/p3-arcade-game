@@ -29,8 +29,7 @@ Enemy.prototype.update = function (dt) {
         var YAxis = [72, 155, 238];
         // randomly select a new y-coordinate
         this.y = Random(YAxis);
-        this.reset();
-    }
+    };
 };
 
 // Draw the enemy on the screen, required method for game
@@ -73,7 +72,7 @@ Player.prototype.handleInput = function (direction) {
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
 // Place the player object in a variable called player
-var allEnemies = [new Enemy(70, 150), new Enemy(150,205), new Enemy(240, 100)];
+var allEnemies = [new Enemy(70, 150), new Enemy(150, 205), new Enemy(240, 100)];
 
 var player = new Player();
 
@@ -93,5 +92,5 @@ document.addEventListener('keyup', function(e) {
 
 // returns random value from array
 function Random(array) {
-  return array[Math.floor(Math.random() * array.lenth)];
+  return array[Math.floor(Math.random() * array.length)];
 }
